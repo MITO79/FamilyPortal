@@ -6,7 +6,7 @@ class ta_schedule(models.Model):
     dt = datetime.datetime.today()
 
     id = models.AutoField(primary_key=True)
-    uid_id = models.AutoField(default=0)
+    uid_id = models.IntegerField(default=0)
     targetDay = models.DateField(default=dt.date())
     content = models.CharField(max_length=255,null=True)
     flg_1 = models.IntegerField(default=0)

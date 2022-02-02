@@ -80,14 +80,14 @@ WSGI_APPLICATION = 'FamilyPortal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        # 'ENGINE':'django.db.backends.mysql',
-        # 'NAME':'mysql',
-        # 'USER':'mellophone',
-        # 'PASSWORD':'auag7947',
-        # 'HOST':'118.27.29.203',
-        # 'PORT':'3306',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'FamilyPortal',
+        'USER':'mellophone',
+        'PASSWORD':'auag7947',
+        'HOST':'118.27.29.203',
+        'PORT':'3306',
     }
 }
 
