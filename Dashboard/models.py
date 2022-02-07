@@ -14,13 +14,6 @@ class ma_status(models.Model):
     def __str__(self):
         return str(self.id) + ':' + self.status
 
-class ma_uid(models.Model):
-    id = models.AutoField(primary_key=True)
-    family = models.CharField(max_length=64)
-    member = models.CharField(max_length=64)
-    def __str__(self):
-        return str(self.id) + ':' + self.family + ' ' + self.member
-
 class ma_listType(models.Model):
     id = models.AutoField(primary_key=True)
     listType = models.CharField(max_length=64)
@@ -36,4 +29,3 @@ class ta_log(models.Model):
     updateDay = models.DateTimeField(default=timezone.now)
     def __str__(self):
         return str(self.updateDay) + ' table_id = ' + str(self.table_id)
-     
