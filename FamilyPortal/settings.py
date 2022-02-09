@@ -38,12 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'FamilyPortal',
-    'Login',
-    'Dashboard',
-    'Schedule',
-    'List',
-    'Budget',
+    'Login.apps.LoginConfig',
+    'Dashboard.apps.DashboardConfig',
+    'Schedule.apps.ScheduleConfig',
+    'List.apps.ListConfig',
+    'Budget.apps.BudgetConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,7 +138,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

@@ -6,5 +6,11 @@
     <title>ファミリーポータル</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
+<body>
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{ uid_form.as_table }}
+        <input type="submit" value="OK">
+        </form>
+</body>
 </html>
