@@ -1,0 +1,12 @@
+{% extends 'Login/base.html' %}
+{% block title %}ログイン{% endblock %}
+{% block body %}
+<form enctype="multipart/form-data" method="post" action="{% url 'main' %}">
+    {% csrf_token %}
+    {{uid_form.username.label}}{{ uid_form.username }}
+    {{uid_form.password.label}}{{ uid_form.password }}
+    {{uid_form.first_name.label}}{{ uid_form.first_name }}
+    <input type="submit" value="OK">
+</form>
+<a href="{% url 'signup' %}">新規登録</a>
+{% endblock %}

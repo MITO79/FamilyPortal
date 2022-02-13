@@ -1,0 +1,21 @@
+{% extends 'Login/base.html' %}
+
+{% block title %}新規登録{% endblock %}
+{% block body %}
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{uid_form.username.label}}{{ uid_form.username }}
+        {{uid_form.email.label}}{{ uid_form.email }}
+        {{uid_form.password.label}}{{ uid_form.password }}
+        {{uid_form.first_name.label}}{{ uid_form.first_name }}
+        <input type="submit" value="OK">
+    </form>
+    <script>
+        function testscript(){
+            const obj = document.getElementById("test");
+            obj.innerHTML = "成功です";            
+        }
+    </script>
+    <button type="button" class="btn btn-primary" id="test" onclick="testscript();">Primary</button>
+    <p>test</p>
+{% endblock %}
