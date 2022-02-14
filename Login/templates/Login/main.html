@@ -1,7 +1,8 @@
 {% extends 'Login/base.html' %}
 {% block title %}ログイン{% endblock %}
 {% block body %}
-<form enctype="multipart/form-data" method="post" action="{% url 'main' %}">
+<!--form enctype="multipart/form-data" method="post" action="{% url 'main' %}"-->
+<form enctype="multipart/form-data" method="post">
     {% csrf_token %}
     {{uid_form.username.label}}{{ uid_form.username }}
     {{uid_form.password.label}}{{ uid_form.password }}
