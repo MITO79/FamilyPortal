@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.generic import TemplateView
 from .forms import UidForm
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password
 
 # Create your views here.
 class mainviews(TemplateView):
@@ -25,17 +24,17 @@ class mainviews(TemplateView):
         
         self.username = self.params['uid_form']['username'].value()
         self.password = self.params['uid_form']['password'].value()
-        self.first_name =  self.params['uid_form']['first_name'].value()
-        
+        self.first_name = self.params['uid_form']['first_name'].value()
+
         self.judge = authenticate(username=self.username,password=self.password)
         #当てはめがうまくいったときの処理
         if self.judge is not None:
-            print(self.judge)
-            print('true rute')
-        #     print(self.username)
-        #     print(self.password)
-        #     print(self.first_name)
-        #     self.obj = User.objects.filter(username=self.username)
+            self.query = User.objects.filter(username=self.username).values()
+            self.url = 'dashboard/' # + str(self.query[0]['id']) + '/'
+            print(self.url)
+            self.params = {'uid':self.query[0]['id']}
+            #return render(request,self.url,context=self.params)
+            return redirect(self.url)
         else:
             print(self.params['uid_form'].errors)
         
@@ -70,7 +69,3 @@ class signupviews(TemplateView):
             print(self.params['uid_form'].errors)
         
         return render(request,'Login/signup.html',context=self.params)
-
-
-class loginviews(TemplateView):
-    pass
