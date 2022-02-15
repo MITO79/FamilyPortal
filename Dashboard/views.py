@@ -8,10 +8,11 @@ class mainviews(TemplateView):
             'uid':0,
         }
 
-    def get(self,request):
-        print('request method is GET')
+    def get(self,request,uid):
+        self.params['uid'] = uid
+        self.params['url_list'] = 'list/' + str(self.params['uid']) + '/'
         return render(request,'Dashboard/main.html/',context=self.params)
-    
+
     def post(self,request):
         print('request method is POST')
         return render(request,'Dashboard/main.html/',context=self.params)

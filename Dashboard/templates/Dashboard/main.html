@@ -1,1 +1,6 @@
-<h1>success!!</h1>
+{% extends 'Dashboard/base.html' %}
+{% block title %}ダッシュボード{% endblock %}
+{% block body %}
+{{url_list}}
+<a href="{% url url_list %}">めも</a>
+{% endblock %}

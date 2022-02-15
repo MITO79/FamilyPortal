@@ -30,7 +30,7 @@ class mainviews(TemplateView):
         #当てはめがうまくいったときの処理
         if self.judge is not None:
             self.query = User.objects.filter(username=self.username).values()
-            self.url = 'dashboard/' # + str(self.query[0]['id']) + '/'
+            self.url = 'dashboard/' + str(self.query[0]['id']) + '/'
             print(self.url)
             self.params = {'uid':self.query[0]['id']}
             #return render(request,self.url,context=self.params)
