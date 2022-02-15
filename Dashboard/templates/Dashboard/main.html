@@ -1,6 +1,6 @@
 {% extends 'Dashboard/base.html' %}
 {% block title %}ダッシュボード{% endblock %}
 {% block body %}
+<a href="{% url 'list' uid %}">memo</a>
 {{url_list}}
-<a href="{% url url_list %}">めも</a>
 {% endblock %}
