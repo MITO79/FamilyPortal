@@ -1,6 +1,8 @@
 {% extends 'Dashboard/base.html' %}
 {% block title %}ダッシュボード{% endblock %}
 {% block body %}
-<a href="{% url 'list' uid %}">memo</a>
-{{url_list}}
+<p>ダッシュボード</p>
+<a href="{% url 'list' uid %}">メモアプリ</a>
+<a href="{% url 'schedule' uid %}">カレンダーアプリ</a>
+<a href="{% url 'budget' uid %}">家計簿アプリ</a>
 {% endblock %}
