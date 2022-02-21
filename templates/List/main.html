@@ -2,5 +2,18 @@
 {% block title %}メモアプリ{% endblock %}
 {% block body %}
 <p>ここはメモアプリです</p>
+
+<button type="button" class="btn btn-primary" id="enquette" onclick="enquette();">みんなに聞く</button>
+<div id="new_enquette">
+    
+</div>
+<script>
+    function enquette(){
+        const obj = document.getElementById("new_enquette");
+        obj.innerHTML = "成功です。{{uid}}";
+    }
+</script>
+
+
 <a href="{% url 'dashboard' uid %}">ダッシュボードへ</a>
 {% endblock %}

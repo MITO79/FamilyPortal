@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import mainviews
+from . import views
 
 urlpatterns = [
-    path('<int:uid>/',mainviews.as_view(),name='list'),
+    path('<int:uid>/',views.mainviews.as_view(),name='list'),
 ]
