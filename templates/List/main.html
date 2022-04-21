@@ -5,12 +5,24 @@
 
 <button type="button" class="btn btn-primary" id="enquette" onclick="enquette();">みんなに聞く</button>
 <div id="new_enquette">
-    
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{enquette.title.label}}{{enquette.title}}
+        {{enquette.content.label}}{{enquette.content}}
+    </form>
+</div>
+<div id="repeat">
+<p>ここに挿入</p>
 </div>
 <script>
+    let i = 0;
     function enquette(){
-        const obj = document.getElementById("new_enquette");
-        obj.innerHTML = "成功です。{{uid}}";
+        const obj = document.getElementById("repeat");
+        i += 1;
+        const new_p = document.createElement('p');
+        new_p.textContent = '成功です' + i;
+        new_p.id = 'result';
+        obj.appendChild(new_p);
     }
 </script>
 

@@ -4,8 +4,17 @@ from . import models
 # アンケート用フォーム
 class EnquetteForm(forms.ModelForm):
     
-    listType_id = forms.IntegerField(initial=3)
-    
+    listType_id = forms.IntegerField(initial=3,label='リストタイプ')
+    title = forms.ChoiceField(
+        label='何を聞きたい？',
+        choices=[
+            ('今日の夕飯は？','今日の夕飯は？'),
+            ('週末何する？','週末何する？'),
+            ('どちらがいい？','どちらがいい？'),
+            ('その他','その他'),
+        ]
+    )
+
     class Meta():
         model = models.ta_list
         fields = (
@@ -35,9 +44,9 @@ class EnquetteForm(forms.ModelForm):
         )
         
         labels = {
-            'title':'何を聞きたい？',
+            # 'title':'何を聞きたい？',
             'content':'聞きたいこと',
-            'listType_id':'リストタイプ',
+            # 'listType_id':'リストタイプ',
             'sub_1':'1.',
             'sub_2':'2.',
             'sub_3':'3.',
