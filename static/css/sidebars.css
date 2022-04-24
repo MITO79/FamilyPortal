@@ -1,12 +1,12 @@
 h1 {
-    color:red;
+    color:#0000ff;
 }
 
 main {
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
-    height: -webkit-fill-available;
+    /*height: -webkit-fill-available;*/
     overflow-x: auto;
     overflow-y: hidden;
   }
