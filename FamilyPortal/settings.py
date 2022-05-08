@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Schedule.apps.ScheduleConfig',
     'List.apps.ListConfig',
     'Budget.apps.BudgetConfig',
+    'Recipe.apps.RecipeConfig',
 ]
 
 MIDDLEWARE = [

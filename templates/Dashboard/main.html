@@ -39,30 +39,32 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#house-door"/></svg>
-          ダッシュボード
-        </a>
-      </li>
-      <li>
-        <a href="{% url 'list' uid %}" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-          なんでもリスト
-        </a>
-      </li>
-      <li>
-        <a href="{% url 'schedule' uid %}" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#currentColor"/></svg>
-          カレンダー
-        </a>
-      </li>
-      <li>
-        <a href="{% url 'budget' uid %}" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          家計簿
-        </a>
-      </li>
+      <div id="switch_nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page" id="nav1">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#house-door"/></svg>
+            ダッシュボード
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'list' uid %}" class="nav-link link-dark" id="nav2">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+            なんでもリスト
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'schedule' uid %}" class="nav-link link-dark" id="nav3">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#currentColor"/></svg>
+            カレンダー
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'budget' uid %}" class="nav-link link-dark" id="nav4">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+            家計簿
+          </a>
+        </li>
+      </div>
       <li>
     </ul>
     <hr>
@@ -80,7 +82,13 @@
       </ul>
     </div>
   </div>
+  
+  <p>testtesttest</p>
+
+
 </main>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
