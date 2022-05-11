@@ -1,7 +1,5 @@
-from tkinter import CASCADE
 from django.db import models
 
-# 未migrate！！
 # Create your models here.
 class ma_category(models.Model):
     category = models.CharField(max_length=255,default='',unique=True)

@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from . import forms
+from . import models
 
 # Create your views here.
 class mainviews(TemplateView):
     def __init__(self):
         self.params = {
             'uid':0,
-            'enquette':forms.EnquetteForm()
+            'request':models.ta_request(),
         }
 
     def get(self,request,uid):
