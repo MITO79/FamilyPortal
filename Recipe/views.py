@@ -8,7 +8,7 @@ class mainviews(TemplateView):
     def __init__(self):
         self.params = {
             'uid':0,
-            'request':models.ta_request(),
+            'request':models.ta_request.objects.all(),
         }
 
     def get(self,request,uid):

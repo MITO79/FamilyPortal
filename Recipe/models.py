@@ -22,4 +22,4 @@ class ta_request(models.Model):
     menu = models.ForeignKey(ta_menu,on_delete=models.CASCADE)
     rank = models.ForeignKey(ma_rank,on_delete=models.SET_DEFAULT,default=1)
     def __str__(self):
-        return self.menu
+        return str(self.menu)

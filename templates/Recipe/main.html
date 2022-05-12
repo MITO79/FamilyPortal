@@ -2,6 +2,9 @@
 {% block title %}献立リクエスト{% endblock %}
 {% block body %}
 <p>ここは献立リクエストアプリです</p>
-{{ request.menu }}
+<p>{% for obj in request %}
+    {{ obj.menu }} / {{ obj.rank }}
+    {% endfor %}
+</p>
 <a href="{% url 'dashboard' uid %}">ダッシュボードへ</a>
 {% endblock %}
