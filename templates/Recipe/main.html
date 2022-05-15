@@ -2,9 +2,15 @@
 {% block title %}献立リクエスト{% endblock %}
 {% block body %}
 <p>ここは献立リクエストアプリです</p>
-<p>{% for obj in request %}
-    {{ obj.menu }} / {{ obj.rank }}
-    {% endfor %}
-</p>
+{% for obj in request %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ obj.menu }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ obj.rank }}</h6>
+          <!--a href="#" class="card-link">Another link</a-->
+        </div>
+      </div>
+{% endfor %}
+
 <a href="{% url 'dashboard' uid %}">ダッシュボードへ</a>
 {% endblock %}
