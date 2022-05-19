@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}献立リクエスト{% endblock %}
 {% block body %}
-<p>ここは献立リクエストアプリです</p>
+<h1>献立リクエスト</h1>
 {% for obj in request %}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -11,6 +11,5 @@
         </div>
       </div>
 {% endfor %}
-
-<a href="{% url 'dashboard' uid %}">ダッシュボードへ</a>
+<!--a href="{% url 'dashboard' uid %}">ダッシュボードへ</a-->
 {% endblock %}

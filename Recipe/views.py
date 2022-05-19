@@ -11,8 +11,9 @@ class mainviews(TemplateView):
             'request':models.ta_request.objects.all(),
         }
 
-    def get(self,request,uid):
-        self.params['uid'] = uid
+    # def get(self,request,uid):
+    def get(self,request):
+        # self.params['uid'] = uid
         return render(request,'Recipe/main.html/',context=self.params)
 
     def post(self,request):

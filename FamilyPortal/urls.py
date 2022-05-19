@@ -25,5 +25,6 @@ urlpatterns = [
     path('budget/',include('Budget.urls')),
     path('recipe/',include('Recipe.urls')),
     path('admin/', admin.site.urls),
-    path('',include('Login.urls')),
+    # path('',include('Login.urls')),
+    path('',include('Recipe.urls')),
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
