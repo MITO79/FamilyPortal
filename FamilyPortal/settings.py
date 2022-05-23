@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'FamilyPortal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if DEBUG == TRUE:
+if DEBUG == True:
     DATABASES = {
         'default': {
             # 'ENGINE': 'django.db.backends.sqlite3',
