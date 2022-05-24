@@ -3,13 +3,15 @@
 {% block body %}
 <h1>献立リクエスト</h1>
 {% for obj in request %}
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{ obj.menu }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ obj.rank }}</h6>
-          <!--a href="#" class="card-link">Another link</a-->
-        </div>
+    <div class="card mx-auto" style="width: 50rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ obj.menu }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ obj.rank }}</h6>
+        <!--a href="#" class="card-link">Another link</a-->
       </div>
+    </div>
+  </div>
 {% endfor %}
+
 <!--a href="{% url 'dashboard' uid %}">ダッシュボードへ</a-->
 {% endblock %}
